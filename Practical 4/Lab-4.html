@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semester 1 Subjects</title>
+    <style>
+        * { box-sizing: border-box; scroll-behavior: smooth; }
+        body {
+            margin: 0; font-family: Arial, sans-serif; background: #f4f7fb;
+            color: #333; line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            color: white; text-align: center; padding: 45px 20px;
+        }
+        header h1 { margin: 0; font-size: 38px; }
+        header p { margin-top: 10px; font-size: 18px; }
+        .container { width: 90%; max-width: 1000px; margin: 30px auto; }
+        .subjects, .subject {
+            background: white; padding: 30px; border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,.08);
+        }
+        .subjects h2, .subject h2 { color: #4f46e5; }
+        ol { padding-left: 25px; }
+        ol > li { margin: 18px 0; font-size: 18px; }
+        ol > li > a {
+            color: #4f46e5; text-decoration: none; font-weight: bold;
+        }
+        ol > li > a:hover { color: #7c3aed; text-decoration: underline; }
+        ul { margin-top: 8px; padding-left: 25px; }
+        ul li { font-size: 15px; color: #666; margin: 5px 0; }
+        .subject {
+            margin-top: 30px; border-left: 6px solid #4f46e5;
+        }
+        .subject h2 { margin-top: 0; }
+        .subject p { color: #555; }
+        .type {
+            display: inline-block; padding: 8px 15px; margin: 8px 5px 8px 0;
+            border-radius: 20px; background: #eef2ff; color: #4338ca;
+            font-weight: bold; font-size: 14px;
+        }
+        .back {
+            display: inline-block; margin-top: 15px; padding: 9px 16px;
+            background: #4f46e5; color: white; text-decoration: none;
+            border-radius: 8px; transition: .3s;
+        }
+        .back:hover { background: #7c3aed; transform: translateY(-2px); }
+        footer {
+            margin-top: 50px; padding: 20px; text-align: center;
+            background: #1f2937; color: white;
+        }
+        @media (max-width: 600px) {
+            header h1 { font-size: 28px; }
+            .container { width: 95%; }
+            .subjects, .subject { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <header id="top">
+        <h1>Semester 1 - Subjects</h1>
+        <p>Explore your theory and practical subjects</p>
+    </header>
+
+    <div class="container">
+        <section class="subjects">
+            <h2>📚 Subject List</h2>
+            <ol>
+                <li><a href="#programming">Programming in C</a>
+                    <ul><li>Theory</li><li>Practical</li></ul>
+                </li>
+                <li><a href="#mathematics">Engineering Mathematics</a>
+                    <ul><li>Theory</li><li>Practical</li></ul>
+                </li>
+                <li><a href="#web">Web Development</a>
+                    <ul><li>Theory</li><li>Practical</li></ul>
+                </li>
+                <li><a href="#database">Database Management Systems</a>
+                    <ul><li>Theory</li><li>Practical</li></ul>
+                </li>
+                <li><a href="#communication">Communication Skills</a>
+                    <ul><li>Theory</li><li>Practical</li></ul>
+                </li>
+            </ol>
+        </section>
+
+        <section class="subject" id="programming">
+            <h2>1. Programming in C</h2>
+            <p>Learn the fundamentals of C programming, including variables, data types, operators, loops, functions, arrays, pointers, and structures.</p>
+            <span class="type">Theory</span><span class="type">Practical</span>
+            <p><strong>Theory:</strong> Understand programming concepts and problem-solving techniques.</p>
+            <p><strong>Practical:</strong> Write and execute C programs using different programming concepts.</p>
+            <a class="back" href="#top">↑ Back to Subjects</a>
+        </section>
+
+        <section class="subject" id="mathematics">
+            <h2>2. Engineering Mathematics</h2>
+            <p>Covers calculus, differential equations, matrices, probability, statistics, and mathematical techniques used in engineering.</p>
+            <span class="type">Theory</span><span class="type">Practical</span>
+            <p><strong>Theory:</strong> Study mathematical concepts and their applications in engineering.</p>
+            <p><strong>Practical:</strong> Solve mathematical problems using practical examples and tools.</p>
+            <a class="back" href="#top">↑ Back to Subjects</a>
+        </section>
+
+        <section class="subject" id="web">
+            <h2>3. Web Development</h2>
+            <p>Learn HTML, CSS, JavaScript, forms, hyperlinks, tables, multimedia, and basic web page development.</p>
+            <span class="type">Theory</span><span class="type">Practical</span>
+            <p><strong>Theory:</strong> Learn concepts related to website structure and web technologies.</p>
+            <p><strong>Practical:</strong> Create attractive web pages using HTML, CSS, and JavaScript.</p>
+            <a class="back" href="#top">↑ Back to Subjects</a>
+        </section>
+
+        <section class="subject" id="database">
+            <h2>4. Database Management Systems</h2>
+            <p>Learn about databases, SQL, relational models, normalization, tables, queries, and database design.</p>
+            <span class="type">Theory</span><span class="type">Practical</span>
+            <p><strong>Theory:</strong> Understand database concepts, relational models, and SQL.</p>
+            <p><strong>Practical:</strong> Create databases and execute SQL queries.</p>
+            <a class="back" href="#top">↑ Back to Subjects</a>
+        </section>
+
+        <section class="subject" id="communication">
+            <h2>5. Communication Skills</h2>
+            <p>Develop written and verbal communication, presentation skills, professional writing, and interpersonal skills.</p>
+            <span class="type">Theory</span><span class="type">Practical</span>
+            <p><strong>Theory:</strong> Learn communication principles and professional communication techniques.</p>
+            <p><strong>Practical:</strong> Practice presentations, group discussions, interviews, and public speaking.</p>
+            <a class="back" href="#top">↑ Back to Subjects</a>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2026 Semester 1 | Student Subject Portal</p>
+    </footer>
+</body>
+</html>
