@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            text-align: center;
+            color: darkblue;
+        }
+
+        form {
+            background-color: white;
+            width: 500px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid gray;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, select {
+            margin: 8px 0 15px 0;
+            padding: 8px;
+        }
+
+        .button {
+            background-color: darkblue;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Student Registration Form</h1>
+
+    <form>
+
+        <!-- Name -->
+        <label>Full Name:</label><br>
+        <input type="text" name="name" placeholder="Enter your name" required>
+        <br>
+
+        <!-- Email -->
+        <label>Email:</label><br>
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <br>
+
+        <!-- Password -->
+        <label>Password:</label><br>
+        <input type="password" name="password" placeholder="Enter password" required>
+        <br>
+
+        <!-- Gender -->
+        <label>Gender:</label><br>
+
+        <input type="radio" name="gender" value="male">
+        Male
+
+        <input type="radio" name="gender" value="female">
+        Female
+
+        <input type="radio" name="gender" value="other">
+        Other
+
+        <br><br>
+
+        <!-- Date of Birth -->
+        <label>Date of Birth:</label><br>
+        <input type="date" name="dob">
+        <br>
+
+        <!-- City -->
+        <label>City:</label><br>
+        <select name="city">
+            <option>Select City</option>
+            <option>Ahmedabad</option>
+            <option>Gandhidham</option>
+            <option>Surat</option>
+            <option>Rajkot</option>
+            <option>Vadodara</option>
+        </select>
+        <br>
+
+        <!-- Course -->
+        <label>Course:</label><br>
+        <select name="course">
+            <option>Select Course</option>
+            <option>BCA</option>
+            <option>MCA</option>
+            <option>BBA</option>
+            <option>B.Sc</option>
+        </select>
+        <br>
+
+        <!-- Hobbies -->
+        <label>Hobbies:</label><br>
+
+        <input type="checkbox" name="hobby" value="reading">
+        Reading
+
+        <input type="checkbox" name="hobby" value="music">
+        Music
+
+        <input type="checkbox" name="hobby" value="sports">
+        Sports
+
+        <input type="checkbox" name="hobby" value="travelling">
+        Travelling
+
+        <br><br>
+
+        <!-- Buttons -->
+        <input class="button" type="submit" value="Register">
+
+        <input class="button" type="reset" value="Reset">
+
+    </form>
+
+</body>
+</html>
+
