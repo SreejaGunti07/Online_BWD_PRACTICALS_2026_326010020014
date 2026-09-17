@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Admission Form</title>
+
+    <style>
+        /* Body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Main Form Box */
+        .form-container {
+            width: 600px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+            border: 2px solid darkblue;
+            border-radius: 10px;
+        }
+
+        /* Heading */
+        h1 {
+            text-align: center;
+            color: darkblue;
+            text-shadow: 1px 1px 2px gray;
+        }
+
+        h3 {
+            color: darkblue;
+            border-bottom: 1px solid lightblue;
+            padding-bottom: 5px;
+        }
+
+        /* Labels */
+        label {
+            display: block;
+            margin-top: 12px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        /* Text boxes */
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 9px;
+            margin-bottom: 10px;
+            border: 1px solid gray;
+            border-radius: 5px;
+        }
+
+        /* Focus Selector */
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border: 2px solid darkblue;
+            outline: none;
+        }
+
+        /* Radio Buttons and Checkboxes */
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .option {
+            margin: 8px 0;
+        }
+
+        /* Text Area */
+        textarea {
+            height: 80px;
+            resize: none;
+        }
+
+        /* Buttons */
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 10px 20px;
+            margin: 10px 5px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            background-color: darkblue;
+            cursor: pointer;
+        }
+
+        input[type="reset"] {
+            background-color: gray;
+        }
+
+        input[type="submit"]:hover {
+            background-color: blue;
+        }
+
+        input[type="reset"]:hover {
+            background-color: black;
+        }
+
+        /* Button Alignment */
+        .buttons {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+
+        <h1>College Admission Form</h1>
+
+        <form>
+
+            <!-- Personal Information -->
+            <h3>Personal Information</h3>
+
+            <label for="name">Full Name:</label>
+            <input type="text" id="name"
+                   placeholder="Enter your full name"
+                   required>
+
+
+            <label for="email">Email:</label>
+            <input type="email" id="email"
+                   placeholder="Enter your email"
+                   required>
+
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone"
+                   placeholder="Enter phone number">
+
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob">
+
+
+            <label>Gender:</label>
+
+            <div class="option">
+                <input type="radio" name="gender" value="male">
+                Male
+
+                <input type="radio" name="gender" value="female">
+                Female
+
+                <input type="radio" name="gender" value="other">
+                Other
+            </div>
+
+
+            <!-- Academic Information -->
+            <h3>Academic Information</h3>
+
+            <label for="course">Select Course:</label>
+
+            <select id="course">
+                <option>Select Course</option>
+                <option>BCA</option>
+                <option>BBA</option>
+                <option>B.Sc</option>
+                <option>MCA</option>
+            </select>
+
+
+            <label for="qualification">
+                Highest Qualification:
+            </label>
+
+            <input type="text"
+                   id="qualification"
+                   placeholder="Enter qualification">
+
+
+            <!-- Hobbies -->
+            <label>Hobbies:</label>
+
+            <div class="option">
+                <input type="checkbox" name="hobby">
+                Reading
+
+                <input type="checkbox" name="hobby">
+                Music
+
+                <input type="checkbox" name="hobby">
+                Sports
+
+                <input type="checkbox" name="hobby">
+                Travelling
+            </div>
+
+
+            <!-- Address -->
+            <h3>Address</h3>
+
+            <label for="address">Address:</label>
+
+            <textarea id="address"
+                      placeholder="Enter your address">
+            </textarea>
+
+
+            <label for="city">City:</label>
+
+            <input type="text"
+                   id="city"
+                   placeholder="Enter your city">
+
+
+            <!-- Buttons -->
+            <div class="buttons">
+
+                <input type="submit" value="Submit">
+
+                <input type="reset" value="Reset">
+
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
