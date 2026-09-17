@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML5 Canvas and SVG</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+
+        h1 {
+            color: darkblue;
+        }
+
+        .box {
+            background-color: white;
+            width: 700px;
+            max-width: 90%;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid gray;
+        }
+
+        canvas {
+            border: 1px solid black;
+            background-color: white;
+        }
+
+        svg {
+            border: 1px solid black;
+            background-color: white;
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>HTML5 Canvas and SVG</h1>
+
+
+    <!-- ========================= -->
+    <!-- HTML5 CANVAS -->
+    <!-- ========================= -->
+
+    <div class="box">
+
+        <h2>HTML5 Canvas</h2>
+
+        <canvas id="myCanvas" width="600" height="300">
+            Your browser does not support HTML5 Canvas.
+        </canvas>
+
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- SVG COLLEGE LOGO -->
+    <!-- ========================= -->
+
+    <div class="box">
+
+        <h2>College Logo Using SVG</h2>
+
+        <svg width="600" height="320"
+             viewBox="0 0 600 320"
+             xmlns="http://www.w3.org/2000/svg">
+
+            <!-- College Shield -->
+            <path d="M40 40
+                     L140 40
+                     L140 130
+                     Q140 175 90 200
+                     Q40 175 40 130 Z"
+                  fill="#20a9c6"
+                  stroke="gray"
+                  stroke-width="8"/>
+
+
+            <!-- M inside Shield -->
+            <text x="90"
+                  y="145"
+                  text-anchor="middle"
+                  font-size="70"
+                  font-family="Arial"
+                  font-weight="bold"
+                  fill="white">
+                M
+            </text>
+
+
+            <!-- Marwadi University -->
+            <text x="170"
+                  y="90"
+                  font-size="48"
+                  font-family="Arial"
+                  fill="#b99a70">
+                Marwadi
+            </text>
+
+            <text x="170"
+                  y="135"
+                  font-size="40"
+                  font-family="Arial"
+                  fill="#b99a70">
+                University
+            </text>
+
+
+            <!-- Marwadi Chandarana Group -->
+            <text x="170"
+                  y="165"
+                  font-size="17"
+                  font-family="Arial"
+                  fill="black">
+                Marwadi Chandarana Group
+            </text>
+
+
+            <!-- Vertical Line -->
+            <line x1="430"
+                  y1="30"
+                  x2="430"
+                  y2="190"
+                  stroke="black"
+                  stroke-width="2"/>
+
+
+            <!-- NAAC -->
+            <text x="500"
+                  y="70"
+                  text-anchor="middle"
+                  font-size="28"
+                  font-family="Arial"
+                  font-weight="bold"
+                  fill="black">
+                NAAC
+            </text>
+
+
+            <!-- NAAC Circle -->
+            <circle cx="500"
+                    cy="130"
+                    r="45"
+                    fill="#b52b2b"
+                    stroke="#d4af37"
+                    stroke-width="8"/>
+
+
+            <!-- A+ -->
+            <text x="500"
+                  y="145"
+                  text-anchor="middle"
+                  font-size="45"
+                  font-family="Arial"
+                  font-weight="bold"
+                  fill="white">
+                A+
+            </text>
+
+
+            <!-- Horizontal Line -->
+            <line x1="20"
+                  y1="220"
+                  x2="580"
+                  y2="220"
+                  stroke="black"
+                  stroke-width="2"/>
+
+
+            <!-- Department Name -->
+            <text x="300"
+                  y="275"
+                  text-anchor="middle"
+                  font-size="25"
+                  font-family="Arial"
+                  fill="black">
+                Department of Emerging Technologies
+            </text>
+
+        </svg>
+
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- JAVASCRIPT FOR CANVAS -->
+    <!-- ========================= -->
+
+    <script>
+
+        // Get Canvas
+        var canvas = document.getElementById("myCanvas");
+
+        // Get 2D Drawing Context
+        var ctx = canvas.getContext("2d");
+
+
+        // Draw Rectangle
+        ctx.fillStyle = "lightblue";
+        ctx.fillRect(50, 40, 150, 70);
+
+
+        // Draw Circle
+        ctx.beginPath();
+        ctx.arc(350, 75, 40, 0, 2 * Math.PI);
+        ctx.stroke();
+
+
+        // Draw Line
+        ctx.beginPath();
+        ctx.moveTo(50, 170);
+        ctx.lineTo(550, 170);
+        ctx.stroke();
+
+
+        // Draw Text
+        ctx.font = "25px Arial";
+        ctx.fillStyle = "darkblue";
+        ctx.fillText("Marwadi University", 190, 240);
+
+    </script>
+
+</body>
+</html>
