@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Eligibility</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .box {
+            background-color: white;
+            width: 400px;
+            margin: auto;
+            padding: 25px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: #2196f3;
+        }
+
+        label {
+            display: inline-block;
+            width: 180px;
+            text-align: left;
+            margin: 10px;
+        }
+
+        input {
+            padding: 8px;
+            width: 150px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #2196f3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0b7dda;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Student Eligibility</h1>
+
+        <label>Enter Age:</label>
+        <input type="number" id="age"><br>
+
+        <label>Attendance (%):</label>
+        <input type="number" id="attendance"><br>
+
+        <label>Marks (%):</label>
+        <input type="number" id="marks"><br>
+
+        <button onclick="checkEligibility()">
+            Check Eligibility
+        </button>
+
+    </div>
+
+    <script>
+
+        function checkEligibility() {
+
+            // Get values from input fields
+            let age = Number(document.getElementById("age").value);
+            let attendance = Number(document.getElementById("attendance").value);
+            let marks = Number(document.getElementById("marks").value);
+
+            // Check eligibility
+            if (age >= 18 && attendance >= 75 && marks >= 40) {
+
+                alert("Congratulations!\n\nYou are eligible for the examination/admission.");
+
+            }
+            else {
+
+                alert("Sorry!\n\nYou are not eligible for the examination/admission.");
+
+            }
+        }
+
+    </script>
+
+</body>
+</html>

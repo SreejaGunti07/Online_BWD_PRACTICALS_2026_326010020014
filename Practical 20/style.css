@@ -1,0 +1,60 @@
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f2f2f2;
+}
+
+
+/* Navigation */
+.navbar-brand {
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: #00bcd4 !important;
+}
+
+
+/* Home Header */
+.hero {
+    background-color: #e3f2fd;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.hero h1 {
+    font-size: 40px;
+    color: #1565c0;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+
+/* Cards */
+.card {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+
+.card:hover {
+    box-shadow: 0 5px 10px gray;
+}
+
+
+/* Course Cards */
+.course-card {
+    min-height: 220px;
+}
+
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}

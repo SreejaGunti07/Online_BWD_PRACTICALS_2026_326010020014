@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f2f2f2;
+            padding: 30px;
+        }
+
+        .container {
+            width: 450px;
+            background-color: white;
+            margin: auto;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2196f3;
+        }
+
+        label {
+            display: inline-block;
+            width: 120px;
+            margin-top: 12px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        select {
+            width: 250px;
+            padding: 8px;
+            margin-top: 8px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin: 8px;
+        }
+
+        .buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .submit {
+            background-color: #2196f3;
+            color: white;
+        }
+
+        .reset {
+            background-color: #777;
+            color: white;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        .error {
+            color: red;
+            font-size: 13px;
+            margin-left: 125px;
+        }
+
+        .success {
+            color: green;
+            text-align: center;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Student Registration</h1>
+
+        <form id="registrationForm">
+
+            <!-- Name -->
+            <label>Name:</label>
+            <input type="text" id="name">
+            <div id="nameError" class="error"></div>
+
+            <!-- Email -->
+            <label>Email:</label>
+            <input type="email" id="email">
+            <div id="emailError" class="error"></div>
+
+            <!-- Password -->
+            <label>Password:</label>
+            <input type="password" id="password">
+            <div id="passwordError" class="error"></div>
+
+            <!-- Gender -->
+            <label>Gender:</label>
+            <input type="radio" name="gender" value="Male"> Male
+            <input type="radio" name="gender" value="Female"> Female
+            <div id="genderError" class="error"></div>
+
+            <!-- Date of Birth -->
+            <label>Date of Birth:</label>
+            <input type="date" id="dob">
+            <div id="dobError" class="error"></div>
+
+            <!-- City -->
+            <label>City:</label>
+            <select id="city">
+                <option value="">-- Select City --</option>
+                <option value="Ahmedabad">Ahmedabad</option>
+                <option value="Rajkot">Rajkot</option>
+                <option value="Gandhinagar">Gandhinagar</option>
+                <option value="Surat">Surat</option>
+                <option value="Vadodara">Vadodara</option>
+            </select>
+            <div id="cityError" class="error"></div>
+
+            <!-- Course -->
+            <label>Course:</label>
+            <select id="course">
+                <option value="">-- Select Course --</option>
+                <option value="BCA">BCA</option>
+                <option value="BBA">BBA</option>
+                <option value="MCA">MCA</option>
+                <option value="MBA">MBA</option>
+            </select>
+            <div id="courseError" class="error"></div>
+
+            <!-- Hobbies -->
+            <label>Hobbies:</label>
+            <input type="checkbox" name="hobby" value="Reading"> Reading
+            <input type="checkbox" name="hobby" value="Sports"> Sports
+            <input type="checkbox" name="hobby" value="Music"> Music
+
+            <div id="hobbyError" class="error"></div>
+
+            <!-- Buttons -->
+            <div class="buttons">
+                <button type="submit" class="submit">
+                    Register
+                </button>
+
+                <button type="reset" class="reset">
+                    Reset
+                </button>
+            </div>
+
+            <div id="successMessage" class="success"></div>
+
+        </form>
+
+    </div>
+
+
+    <script>
+
+        // Function to validate the form
+        function validateForm(event) {
+
+            // Prevent form submission
+            event.preventDefault();
+
+            // Get values
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let password = document.getElementById("password").value;
+            let dob = document.getElementById("dob").value;
+            let city = document.getElementById("city").value;
+            let course = document.getElementById("course").value;
+
+            let valid = true;
+
+            // Clear previous messages
+            document.getElementById("nameError").innerHTML = "";
+            document.getElementById("emailError").innerHTML = "";
+            document.getElementById("passwordError").innerHTML = "";
+            document.getElementById("genderError").innerHTML = "";
+            document.getElementById("dobError").innerHTML = "";
+            document.getElementById("cityError").innerHTML = "";
+            document.getElementById("courseError").innerHTML = "";
+            document.getElementById("hobbyError").innerHTML = "";
+            document.getElementById("successMessage").innerHTML = "";
+
+            // Name validation
+            let namePattern = /^[A-Za-z ]+$/;
+
+            if (name == "") {
+                document.getElementById("nameError").innerHTML =
+                    "Name is required.";
+                valid = false;
+            }
+            else if (!namePattern.test(name)) {
+                document.getElementById("nameError").innerHTML =
+                    "Name should contain only letters.";
+                valid = false;
+            }
+
+            // Email validation
+            let emailPattern =
+                /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (email == "") {
+                document.getElementById("emailError").innerHTML =
+                    "Email is required.";
+                valid = false;
+            }
+            else if (!emailPattern.test(email)) {
+                document.getElementById("emailError").innerHTML =
+                    "Enter a valid email.";
+                valid = false;
+            }
+
+            // Password validation
+            if (password == "") {
+                document.getElementById("passwordError").innerHTML =
+                    "Password is required.";
+                valid = false;
+            }
+            else if (password.length < 6) {
+                document.getElementById("passwordError").innerHTML =
+                    "Password must contain at least 6 characters.";
+                valid = false;
+            }
+
+            // Gender validation
+            let gender = document.querySelector(
+                'input[name="gender"]:checked'
+            );
+
+            if (gender == null) {
+                document.getElementById("genderError").innerHTML =
+                    "Please select gender.";
+                valid = false;
+            }
+
+            // Date of Birth validation
+            if (dob == "") {
+                document.getElementById("dobError").innerHTML =
+                    "Date of birth is required.";
+                valid = false;
+            }
+
+            // City validation
+            if (city == "") {
+                document.getElementById("cityError").innerHTML =
+                    "Please select a city.";
+                valid = false;
+            }
+
+            // Course validation
+            if (course == "") {
+                document.getElementById("courseError").innerHTML =
+                    "Please select a course.";
+                valid = false;
+            }
+
+            // Hobby validation
+            let hobbies = document.querySelectorAll(
+                'input[name="hobby"]:checked'
+            );
+
+            if (hobbies.length == 0) {
+                document.getElementById("hobbyError").innerHTML =
+                    "Please select at least one hobby.";
+                valid = false;
+            }
+
+            // Final result
+            if (valid) {
+
+                document.getElementById("successMessage").innerHTML =
+                    "Registration successful!";
+
+                alert("Student registration successful!");
+
+            }
+
+        }
+
+
+        // Submit event
+        document.getElementById("registrationForm")
+            .addEventListener("submit", validateForm);
+
+    </script>
+
+</body>
+</html>
